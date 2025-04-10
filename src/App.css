@@ -1,38 +1,69 @@
+/* Reset fondo completo */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  padding-top: 64px;
+  background-color: #f0f2f5;
+}
+
+/* AppBar gris oscuro elegante */
+.app-bar {
+  background: linear-gradient(90deg, #252323 0%, #4a4a4a 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Toolbar con espacio */
+.toolbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 24px;
+  height: 64px;
+}
+
+/* Logo texto */
+.logo {
   color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilo general de los tabs */
+.tabs {
+  min-height: 64px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Cada tab */
+.tab {
+  font-weight: 500;
+  min-width: 100px;
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+  border-radius: 12px 12px 0 0;
+  text-transform: none;
+}
+
+/* Hover con efecto elegante */
+.tab:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.03);
+}
+
+/* Contenido principal */
+.content {
+  padding: 40px;
+  text-align: center;
 }
