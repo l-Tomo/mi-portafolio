@@ -3,6 +3,7 @@ import { AppBar, Tabs, Tab, Toolbar, Box, Typography } from '@mui/material';
 import './App.css';
 import  MainUI  from './components/Main/MainUI';
 import ExperienceUI from './components/Experience/ExperienceUI';
+import ProjectsUI from './components/Projects/ProjectsUI'; // Import ProjectsUI
 
 function App() {
   const [value, setValue] = useState(0);
@@ -36,8 +37,8 @@ function App() {
 
       <Box className="content">
         {value === 0 &&  <MainUI />}
-        {value === 1 && <Typography variant="h4"><ExperienceUI /></Typography>}
-        {value === 2 && <Typography variant="h4">Aqui estará mis Proyectos </Typography>}
+        {value === 1 && <ExperienceUI />}
+        {value === 2 && <ProjectsUI />}
         {value === 3 && <Typography variant="h4">Aqui estará mis Logros Academicos </Typography>}
         {value === 4 && 
           <Typography variant="h4">Sección de Contacto</Typography>

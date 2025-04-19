@@ -1,0 +1,55 @@
+.terminal-container {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+  
+  .terminal-header {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .green {
+    color: #00ff00;
+  }
+  
+  .blue {
+    color: #00bfff;
+  }
+  
+  .project-list {
+    margin-bottom: 20px;
+  }
+  
+  .project-item {
+    cursor: pointer;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .project-item::before {
+    content: "📁";
+    position: absolute;
+    left: 0;
+  }
+  
+  .project-item:hover {
+    background-color: #333;
+  }
+  
+  .terminal-output {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .project-info p {
+    color: #ddd;
+    margin: 5px 0;
+  }
+  
