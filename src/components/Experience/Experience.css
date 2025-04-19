@@ -1,0 +1,45 @@
+.experience-container {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .experience-list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: center;
+  }
+  
+  .experience-card {
+    border-radius: 16px;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+  
+  .experience-image {
+    height: 200px;
+    object-fit: contain;
+    background-color: #000000;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  .experience-description {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #cccccc;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  

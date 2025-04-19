@@ -1,3 +1,4 @@
+  /* Main.css */
 .main-container {
     padding-top: 32px;
     background-color: #1e1e1e;
@@ -22,15 +23,19 @@
   
   .main-description {
     font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
     text-align: center;
+    margin-top: 16px;
   }
   
   .video-status {
-    text-align: center;
-    margin-top: 16px;
-    color: #90ee90;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #90caf9;
   }
+
+.MuiListItemButton-root {
+  transition: all 0.3s ease-in-out;
+}
+
   

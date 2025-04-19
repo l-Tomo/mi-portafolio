@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { AppBar, Tabs, Tab, Toolbar, Box, Typography } from '@mui/material';
 import './App.css';
-import  MainUI  from './components/Main/MainUI'
+import  MainUI  from './components/Main/MainUI';
+import ExperienceUI from './components/Experience/ExperienceUI';
 
 function App() {
   const [value, setValue] = useState(0);
@@ -15,7 +16,7 @@ function App() {
       <AppBar position="fixed" className="app-bar"elevation={0} color="transparent">
         <Toolbar className="toolbar">
           <Typography variant="h6" className="logo">
-            Portafolio
+            Portafolio Tomas Alzate Cardona
           </Typography>
           <Tabs
             value={value}
@@ -35,12 +36,12 @@ function App() {
 
       <Box className="content">
         {value === 0 &&  <MainUI />}
-        {value === 1 && <Typography variant="h4">Aqui estará mi Experiencia laboral </Typography>}
+        {value === 1 && <Typography variant="h4"><ExperienceUI /></Typography>}
         {value === 2 && <Typography variant="h4">Aqui estará mis Proyectos </Typography>}
         {value === 3 && <Typography variant="h4">Aqui estará mis Logros Academicos </Typography>}
-        {value === 4 && (
+        {value === 4 && 
           <Typography variant="h4">Sección de Contacto</Typography>
-        )}
+        }
       </Box>
     </Box>
   );
