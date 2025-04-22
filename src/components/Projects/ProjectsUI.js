@@ -1,40 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 import { useProjects } from './Projects';
+import ImageZoomModal from './../ImageZoomModal';
 
-const ProjectsUI = () => {
+export const ProjectsUI = () => {
   const { projects, selected, setSelected } = useProjects();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState('');
+
+  const handleImageClick = (image) => {
+    setModalImage(image);
+    setIsModalOpen(true);
+  };
 
   return (
-    <div className="terminal-container">
-      <div className="terminal-header">
-        <span className="green">tomas@portafolio</span>:<span className="blue">~/proyectos</span>$ ls
-      </div>
-      <div className="project-list">
-        {projects.map((project, i) => (
-          <div
-            key={i}
-            className="project-item"
-            onClick={() => setSelected(project)}
+    <div className="projects-container">
+      <div className="terminal-box">
+        <p><span className="green">tomas</span><span className="white">@</span><span className="blue">portafolio</span>:<span className="white">~</span>$ ls</p>
+        <p><span className="folder">proyectos-de-software</span></p>
+        <p><span className="green">tomas</span><span className="white">@</span><span className="blue">portafolio</span>:<span className="white">~/proyectos-de-software</span>$ ls</p>
+        {projects.map((project, index) => (
+          <p
+            key={index}
+            className={`folder ${selected === project.name ? 'selected' : ''}`}
+            onClick={() => setSelected(project.name)}
           >
-            {project.name}
-          </div>
+            📁 {project.name}
+          </p>
         ))}
       </div>
 
       {selected && (
-        <div className="terminal-output">
-          <div className="terminal-header">
-            <span className="green">tomas@portafolio</span>:<span className="blue">~/proyectos</span>$ cat {selected.name}
-          </div>
-          <div className="project-info">
-            <p><strong>Título:</strong> {selected.title}</p>
-            <p><strong>Descripción:</strong> {selected.description}</p>
-            <p><strong>Tecnologías:</strong> {selected.tech.join(', ')}</p>
-            <p><strong>Año:</strong> {selected.year}</p>
-          </div>
+        <div className="project-details">
+          {projects.map((project) => {
+            if (project.name === selected) {
+              return (
+                <div key={project.name}>
+                  <h2>{project.title}</h2>
+                  <p>{project.description}</p>
+                  <p><strong>Tecnologías:</strong> {project.tech.join(', ')}</p>                 
+                  <p><strong>Imágenes:</strong></p>
+                  <div className="project-images">
+                    {project.images.map((image, index) => (
+                      <img
+                        key={index}
+                        src={image}
+                        alt={`Imagen ${index + 1}`}
+                        className="project-image"
+                        onClick={() => handleImageClick(image)}
+                      />
+                    ))}
+                  </div>
+                  <p><strong>Repositorio:</strong> <a href={project.github}> {project.github}</a></p>
+                  <p><strong>Año:</strong> {project.year}</p>
+                  {project.repo && (
+                    <p>
+                      <a href={project.repo} target="_blank" rel="noopener noreferrer">
+                        Ver repositorio en GitHub
+                      </a>
+                    </p>
+                  )}
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="project-image"
+                      onClick={() => handleImageClick(project.image)}
+                    />
+                  )}
+                </div>
+              );
+            }
+            return null;
+          })}
         </div>
       )}
+
+      <ImageZoomModal
+        open={isModalOpen}
+        image={modalImage}
+        handleClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };
