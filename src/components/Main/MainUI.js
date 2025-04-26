@@ -16,7 +16,7 @@ const MainUI = () => {
   return (
     <Container className="main-container">
       <Typography variant="h4" gutterBottom className="main-title">
-        Me presento, soy Tomás Alzate
+        Me presento, soy Tomás Alzate Cardona su futuro desarrollador 
       </Typography>
 
       <Box className="video-wrapper">
