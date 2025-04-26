@@ -19,7 +19,7 @@ function App() {
       <AppBar position="fixed" className="app-bar"elevation={0} color="transparent">
         <Toolbar className="toolbar">
           <Typography variant="h6" className="logo">
-            Portafolio Tomas Alzate Cardona
+            Portafolio Tomas Alzate 
           </Typography>
           <Tabs
             value={value}
