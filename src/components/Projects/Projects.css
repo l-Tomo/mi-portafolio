@@ -104,3 +104,6 @@
     opacity: 1;
   }
 }
+.white, .blue, .green {
+  overflow: hidden;
+}
