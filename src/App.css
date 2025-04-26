@@ -37,6 +37,7 @@ body, html, #root {
 }
 
 .logo {
+  overflow: hidden;
   color: white;
   font-weight: 700;
   font-size: 1.3rem;

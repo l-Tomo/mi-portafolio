@@ -12,7 +12,6 @@ const AchievementsUI = () => {
           key={achievement.id}
           className="achievement-card"
           style={{ backgroundImage: `url(${achievement.bgImage})` }}
-
         >
           <div className="achievement-content">
             <h2>{achievement.title}</h2>
