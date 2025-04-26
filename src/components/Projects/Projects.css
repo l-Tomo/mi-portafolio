@@ -5,6 +5,7 @@
   padding: 2rem;
   color: #fff;
   font-family: 'Courier New', Courier, monospace;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .terminal-box {
@@ -48,6 +49,10 @@
   width: 100%;
   max-width: 800px;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUpFadeIn 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .project-details h2 {
@@ -77,4 +82,25 @@
   margin-top: 1rem;
   max-width: 100%;
   border-radius: 8px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

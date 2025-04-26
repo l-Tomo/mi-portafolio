@@ -4,6 +4,8 @@ import './App.css';
 import  MainUI  from './components/Main/MainUI';
 import ExperienceUI from './components/Experience/ExperienceUI';
 import ProjectsUI from './components/Projects/ProjectsUI'; // Import ProjectsUI
+import AchievementsUI from './components/Achievements/AchievementsUI'; // Import AchievementsUI
+import ContactUI from './components/Contact/ContactUI'; // Import ContactUI
 
 function App() {
   const [value, setValue] = useState(0);
@@ -39,10 +41,8 @@ function App() {
         {value === 0 &&  <MainUI />}
         {value === 1 && <ExperienceUI />}
         {value === 2 && <ProjectsUI />}
-        {value === 3 && <Typography variant="h4">Aqui estará mis Logros Academicos </Typography>}
-        {value === 4 && 
-          <Typography variant="h4">Sección de Contacto</Typography>
-        }
+        {value === 3 && <AchievementsUI />}
+        {value === 4 && <ContactUI />}      
       </Box>
     </Box>
   );

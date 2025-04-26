@@ -1,41 +1,39 @@
-  /* Main.css */
 .main-container {
-    padding-top: 32px;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-  }
-  
-  .main-title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 24px;
-    text-align: center;
-  }
-  
-  .video-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 24px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  }
-  
-  .main-description {
-    font-size: 1.1rem;
-    text-align: center;
-    margin-top: 16px;
-  }
-  
-  .video-status {
-    margin-top: 30px;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #90caf9;
-  }
+  padding-top: 32px;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
 
+.main-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.main-description {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.video-status {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #90caf9;
+}
+
+/* Efecto suave en botones */
 .MuiListItemButton-root {
   transition: all 0.3s ease-in-out;
 }
-
-  
