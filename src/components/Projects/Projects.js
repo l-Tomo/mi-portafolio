@@ -10,8 +10,8 @@ export const useProjects = () => {
       description: 'Aplicación para gestionar tareas personales. Incluye funcionalidades como creación, edición, eliminación y organización por prioridad.',
       tech: ['React', 'Material UI'],
       images: [
-        '/images/CapturaProyecto3.png',
-        '/images/CapturaProyecto4.png',
+        '/Images/CapturaProyecto3.png',
+        '/Images/CapturaProyecto4.png',
       ],
       github: 'https://github.com/l-Tomo/homeworks',
       year: 2025
@@ -22,8 +22,8 @@ export const useProjects = () => {
       description: 'Sistema para controlar recetas, pedidos y stock de ingredientes en el área de cocina del SENA sede Comercio. Interfaz intuitiva y centrada en las necesidades educativas.',
       tech: ['Laravel', 'SqlDB'],
       images: [
-        '/images/todos-1.png',
-        '/images/todos-2.png',
+        '/Images/todos-1.png',
+        '/Images/todos-2.png',
       ],
       github: 'No es codigo abierto, pero puedes consultar el proyecto en la sede del SENA',
       year: 2025
@@ -35,8 +35,8 @@ export const useProjects = () => {
       description: 'Este mismo sitio web donde exploro diseños, tecnologías modernas y presento mis proyectos y experiencia.Es codigo abierto, puedes ver el código en mi GitHub, A continuación te dejo el enlace.',
       tech: ['React', 'Material UI', 'CSS'],
       images: [
-        '/images/CapturaProyecto1.png',
-        '/images/CapturaProyecto2.png',
+        '/Images/CapturaProyecto1.png',
+        '/Images/CapturaProyecto2.png',
       ],
       github: 'https://github.com/l-Tomo/mi-portafolio',
       year: 2025
