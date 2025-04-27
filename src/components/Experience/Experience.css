@@ -1,5 +1,5 @@
 .experience-container {
-  padding: 40px 20px;
+  padding: 0px 20px;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
 }
@@ -20,6 +20,7 @@
   opacity: 0;
   animation: slideUpFadeIn 1s ease forwards;
   animation-delay: 0.3s;
+  margin: auto;
 }
 
 .experience-card:hover {
