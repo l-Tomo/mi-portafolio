@@ -25,6 +25,8 @@ function App() {
             value={value}
             onChange={handleChange}
             textColor="inherit"
+            variant="scrollable"
+            
             TabIndicatorProps={{ style: { background: '#fff' } }}
             className="tabs"
           >
