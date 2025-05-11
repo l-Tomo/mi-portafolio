@@ -18,9 +18,11 @@ const ContactUI = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="contact-card linkedin"
+          onMouseEnter={() => setHovered('linkedin')}
+          onMouseLeave={() => setHovered(null)}
         >
           <FaLinkedin size={50} />
-          <span>LinkedIn</span>
+          <span>{hovered === 'linkedin' ? 'Tomas Alzate' : 'LinkedIn'}</span>
         </a>
 
         <a
