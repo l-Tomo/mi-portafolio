@@ -23,7 +23,7 @@ const MainUI = () => {
         <iframe
           width="100%"
           height="500"
-          src="https://youtu.be/3-yNIIEwXlY"
+          src="https://www.youtube.com/embed/3-yNIIEwXlY"
           title="Presentación de Tomas Alzate"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
